@@ -1,7 +1,7 @@
 import Http from '../plugins/Http'
 
 export default function (context) {
-    next();
+    // next();
     // if (typeof localStorage.jwt == 'undefined') {
     //     // 未登录
     //     if (context.route.name != 'login') {
