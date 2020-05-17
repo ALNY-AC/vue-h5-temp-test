@@ -1,20 +1,6 @@
 import axios from 'axios';
 import url from './url.js';
-import config from './config';
 
-// import userInfo from '../modus/UserInfo/UserInfo.js';
-
-function to() {
-    return Object.keys(config).map(k => {
-        let v = '';
-        if (typeof config[k] == 'function') {
-            v = `${k}=${config[k]()}`;
-        } else {
-            v = `${k}=${config[k]}`;
-        } config
-        return v;
-    }).join(';');
-}
 
 
 let Http = axios.create({
@@ -37,9 +23,8 @@ let Http = axios.create({
 
 // // 添加一个请求拦截器
 Http.interceptors.request.use(function (conf) {
-    conf.headers.Authorization = to(config);
+    conf.headers.Authorization = localStorage.jwt
 
-    // conf.headers.Authorization = "token " + 'ssssssssssssssssssssssssssssssaa';
     // conf.headers['Access-TimeSpan'] = new Date().valueOf();
     // if (conf.method == 'get') {
     // if (!conf.params) conf.params = {};

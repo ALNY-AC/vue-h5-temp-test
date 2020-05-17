@@ -1,24 +1,25 @@
 import Http from '../plugins/Http'
 
 export default function (context) {
-    if (typeof localStorage.jwt == 'undefined') {
-        // 未登录
-        if (context.route.name != 'login') {
-            context.app.router.replace('/login');
-        }
+    next();
+    // if (typeof localStorage.jwt == 'undefined') {
+    //     // 未登录
+    //     if (context.route.name != 'login') {
+    //         context.app.router.replace('/login');
+    //     }
 
-    } else {
+    // } else {
 
-        return new Promise(async (next) => {
-            try {
-                next();
-            } catch (e) {
-                console.warn(e);
-                console.warn('验证失败！');
-                // context.app.router.replace('/login');
-            }
-        });
+    //     return new Promise(async (next) => {
+    //         try {
+    //             next();
+    //         } catch (e) {
+    //             console.warn(e);
+    //             console.warn('验证失败！');
+    //             // context.app.router.replace('/login');
+    //         }
+    //     });
 
 
-    }
+    // }
 }

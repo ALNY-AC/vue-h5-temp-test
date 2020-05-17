@@ -1,127 +1,16 @@
-import echarts from 'echarts'
-
 export default {
     name: 'index',
     data() {
-        return {
-            data: null,
-            userChar: null,
-            taskChar: null,
-            query: {
-                day: 7
-            },
-            loading: false,
-        };
+        return {};
     },
     methods: {
         // 用于初始化一些数据
         init() {
-
-            this.userChar = echarts.init(document.getElementById('userData'));
-            this.taskChar = echarts.init(document.getElementById('taskData'));
-
             this.update();
-        },
-        initUser() {
-
-            let option = {
-                color: ['#61cad7'],
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                    }
-                },
-                grid: {
-                    left: '3%',
-                    right: '4%',
-                    bottom: '3%',
-                    containLabel: true
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        data: this.data.user ? this.data.user.x : [],
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: 'value',
-                        minInterval: 1
-                    }
-                ],
-                series: [
-                    {
-                        name: '新增用户',
-                        type: 'bar',
-                        label: {
-                            show: true,
-                            position: 'top'
-                        },
-                        data: this.data.user ? this.data.user.data : [],
-                    }
-                ]
-            };
-            this.userChar.setOption(option);
-
-
-        },
-        initTask() {
-            let option = {
-                color: ['#61cad7'],
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                    }
-                },
-                grid: {
-                    left: '3%',
-                    right: '4%',
-                    bottom: '3%',
-                    containLabel: true
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        data: this.data.task ? this.data.task.x : [],
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: 'value',
-                        minInterval: 1
-                    }
-                ],
-                series: [
-                    {
-                        name: '新增用户',
-                        type: 'bar',
-                        label: {
-                            show: true,
-                            position: 'top'
-                        },
-                        data: this.data.task ? this.data.task.data : [],
-
-                    }
-                ]
-            };
-            this.taskChar.setOption(option);
-        },
-        updateUI() {
-            // if (this.userChar) {
-            //     this.userChar.resize();
-            //     this.taskChar.resize();
-            // }
         },
         // 用于更新一些数据
         async update() {
-            this.loading = true;
-            const res = await this.$http.post('/data/info', this.query);
-            this.data = res.data;
-            this.initUser();
-            this.initTask();
-            this.loading = false;
+            // const res = await this.$http.post('', {});
         },
     },
     // 计算属性
@@ -135,11 +24,7 @@ export default {
     // el 被新创建的 vm.el 替换，并挂载到实例上去之后调用该钩子。
     mounted() {
         this.init();
-        this.$nextTick(() => {
-            // window.addEventListener('resize', () => {
-            //     this.updateUI();
-            // })
-        });
+        this.$nextTick(() => { });
     },
     // 数据更新时调用，发生在虚拟 DOM 打补丁之前。
     beforeUpdate() { },
