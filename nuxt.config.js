@@ -48,7 +48,7 @@ module.exports = {
     ],
     server: {
         // port: 80,
-        host: getLocalIP(),
+        // host: getLocalIP(),
         // // default: 80
         // // default: localhost
         // port: 8080,
