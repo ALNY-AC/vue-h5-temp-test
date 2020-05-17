@@ -1,0 +1,33 @@
+.o-url-list {
+    margin: 20px;
+
+    .url-item {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .item {
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-size: 14px;
+
+        div {
+            color: #777;
+        }
+
+        .name {
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #333;
+        }
+
+        .path {}
+
+    }
+}
+
+.o-url-list /deep/ {}

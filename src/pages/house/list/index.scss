@@ -1,0 +1,82 @@
+@import "@/styles/variable.scss";
+
+#list {
+
+    .list {
+        padding: 10px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .user-card {
+        display: flex;
+        margin-bottom: 20px;
+
+        .user-head {
+
+            margin-right: 10px;
+
+            img {
+                display: block;
+                border-radius: 5px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .user-info {
+            font-size: 14px;
+
+            flex: 1;
+
+            .user-name {
+                font-weight: bold;
+            }
+
+            .add-time {
+                color: $color-info;
+                font-size: 11px;
+            }
+
+        }
+
+        .user-data {}
+
+    }
+
+    .house-body {
+        padding-top: 10px;
+
+        .house-name {
+            font-weight: bold;
+            // font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .house-label {
+            font-weight: bold;
+            display: inline-block;
+        }
+    }
+
+    .img-box {
+        margin-top: 10px;
+
+        .house-img {
+            margin-bottom: 5px;
+            width: 100%;
+            display: block;
+            padding-bottom: 100%;
+            background-size: cover;
+            background-position: center center;
+
+        }
+    }
+}
+
+#list /deep/ {}

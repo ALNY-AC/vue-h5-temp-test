@@ -1,0 +1,104 @@
+@import "@/styles/variable.scss";
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+* {
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    background-color: #f6f6f6;
+    color: #323232;
+}
+
+.page-padding {
+    padding: $page-padding;
+}
+
+.clearfix {
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-blue {
+    color: $color-blue;
+}
+
+.text-warn {
+    color: $color-warn;
+}
+
+.text-error {
+    color: $color-error;
+}
+
+.text-success {
+    color: $color-success;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.window-scrollbar {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track-piece {
+        //滚动条凹槽的颜色，还可以设置边框属性
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        //滚动条的宽度
+        width: 1px;
+        height: 1px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        //滚动条的设置
+        background-color: #008982;
+        background-clip: padding-box;
+        min-height: 28px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #008982;
+    }
+}

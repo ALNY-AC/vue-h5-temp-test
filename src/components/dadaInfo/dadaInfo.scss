@@ -1,0 +1,35 @@
+@import "@/styles/variable.scss";
+#info {
+    background-color: #F6F6F6;
+}
+.recharge {
+    display: flex;
+    background-color: #fff;
+    padding: 15px 15px;
+    .balance {
+        margin: 30px 45px;
+        .balance-money {
+            font-size: 20px;
+        }
+        .balance-title {
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+    .balance-btn {
+        text-align: center;
+        margin-top: 40px;
+        margin-left: 55px;
+    }
+}
+.title {
+    padding: 15px 15px;
+    font-size: 16px;
+}
+
+.info {
+    background-color: #fff;
+}
+
+#info /deep/ {}

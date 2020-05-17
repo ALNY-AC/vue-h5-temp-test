@@ -1,0 +1,33 @@
+@import "@/styles/variable.scss";
+
+#login {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+
+    .login-box {
+        padding: 80px 0;
+        background-color: #61cad7;
+        color: #fff;
+
+
+        .title {
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+    }
+
+    .form-box {
+        padding: 20px;
+
+        .submit {
+            margin-top: 15px;
+        }
+    }
+}
+
+
+#login /deep/ {}
